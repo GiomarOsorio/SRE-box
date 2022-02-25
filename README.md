@@ -34,7 +34,8 @@ command `vagrant up`, or paste the following command on your terminal:
 ```shell
 git clone git@github.com:GiomarOsorio/SRE-box.git \
     && cd SRE-box \
-    && vagrant up
+    && vagrant up \
+    && vagrant ssh
 
 ```
 
@@ -46,6 +47,7 @@ git clone git@github.com:GiomarOsorio/SRE-box.git \
 - Docker
 - Git
 - Gcloud CLI
+- Minikube
 - NodeJS
 - Neovim (Personal Configuration)
 - Packer

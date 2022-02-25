@@ -43,8 +43,7 @@ docker_install(){
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   packages_update
   packages_install docker-ce docker-ce-cli containerd.io
-  groupadd docker
-  usermod -aG docker ubuntu
+  usermod -aG docker vagrant
 }
 
 # ansible install
@@ -73,6 +72,12 @@ packer_install(){
 node_install(){
   curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
   packages_install nodejs
+}
+
+minikube_install(){
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+    dpkg -i minikube_latest_amd64.deb
+    minikube config set driver docker
 }
 
 # neovim install
@@ -119,6 +124,7 @@ provision_config(){
   packer_install
   node_install
   nvim_install
+  minikube_install
   azure_cli_install
   aws_cli_install
   gcloud_cli_install
