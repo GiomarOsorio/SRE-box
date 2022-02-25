@@ -6,7 +6,7 @@ It is a Fork of the project
 additional configurations
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/GiomarOsorio/SRE-box/dev/images/logo-hashicorp.svg" height="80"></img>
+<img src="https://raw.githubusercontent.com/GiomarOsorio/SRE-box/master/images/logo-hashicorp.svg" height="80"></img>
 &nbsp;&nbsp;
 &nbsp;&nbsp;
 &nbsp;&nbsp;
@@ -15,7 +15,7 @@ additional configurations
 &nbsp;&nbsp;
 &nbsp;&nbsp;
 &nbsp;&nbsp;
-<img src="https://github.com/GiomarOsorio/SRE-box/blob/dev/images/logo-virtualbox.png" height="80"></img>
+<img src="https://github.com/GiomarOsorio/SRE-box/blob/master/images/logo-virtualbox.png" height="80"></img>
 </div>
 
 ## Requirements
