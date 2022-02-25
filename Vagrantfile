@@ -8,5 +8,9 @@ Vagrant.configure(2) do |config|
     		  v.memory = 4096
     		  v.cpus = 2
     		end
+    		devbox.vm.provider "hyperv" do |h|
+    		  h.memory = 4096
+    		  h.cpus = 2
+    		end
 	end
 end
