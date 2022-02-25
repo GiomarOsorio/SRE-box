@@ -6,7 +6,7 @@ It is a Fork of the project
 additional configurations
 
 <div align="center">
-<img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" height="80"></img>
+<img src="https://raw.githubusercontent.com/GiomarOsorio/SRE-box/dev/images/logo-hashicorp.svg" height="80"></img>
 &nbsp;&nbsp;
 &nbsp;&nbsp;
 &nbsp;&nbsp;
@@ -15,7 +15,7 @@ additional configurations
 &nbsp;&nbsp;
 &nbsp;&nbsp;
 &nbsp;&nbsp;
-<img src="https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/firebase/images/lockup.png" height="80"></img>
+<img src="https://github.com/GiomarOsorio/SRE-box/blob/dev/images/logo-virtualbox.png" height="80"></img>
 </div>
 
 ## Requirements
