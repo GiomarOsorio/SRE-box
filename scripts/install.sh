@@ -75,10 +75,10 @@ node_install(){
 }
 
 minikube_install(){
-    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-    dpkg -i minikube_latest_amd64.deb
-    minikube config set driver docker
-    rm minikube_latest_amd64.deb
+  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+  dpkg -i minikube_latest_amd64.deb
+  minikube config set driver docker
+  rm minikube_latest_amd64.deb
 }
 
 # neovim install
