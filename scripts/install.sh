@@ -78,6 +78,7 @@ minikube_install(){
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
     dpkg -i minikube_latest_amd64.deb
     minikube config set driver docker
+    rm minikube_latest_amd64.deb
 }
 
 # neovim install
@@ -101,7 +102,7 @@ aws_cli_install(){
   curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   unzip awscliv2.zip
   ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
-  rm awscliv2.zip
+  rm -r awscliv2.zip ./aws/
 }
 
 # gcloud cli install
@@ -113,11 +114,20 @@ gcloud_cli_install(){
   packages_install google-cloud-sdk
 }
 
+configure_time(){
+  export DEBIAN_FRONTEND=noninteractive
+  dpkg-reconfigure tzdata
+  /etc/init.d/ntp stop
+  ntpd -q -g -x -n
+  /etc/init.d/ntp start
+  hwclock --systohc
+}
+
 # run configurations steps
 provision_config(){
   create_ssh
   packages_update
-  packages_install unzip python3-pip git
+  packages_install unzip python3-pip git ntp
   docker_install
   ansible_install
   terraform_install
@@ -128,6 +138,7 @@ provision_config(){
   azure_cli_install
   aws_cli_install
   gcloud_cli_install
+  configure_time
   packages_update
   packages_upgrade
   packages_clean
